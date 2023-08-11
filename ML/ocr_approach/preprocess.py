@@ -52,4 +52,6 @@ def preprocess():
     pickle.dump(vocab, file)
     # close the file
     file.close()
+
+    custom_dataset = CustomOCRDataset('./train_dataset.csv')
     return custom_dataset
