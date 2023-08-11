@@ -2,13 +2,12 @@ package test;
 import java.io.File;
 
 public class TestSolution {
-	private static final String CSV_1_PATH = "resources/1.csv";
-	private static final String CSV_2_PATH = "resources/2.csv";
-	private static final String OUTPUT_CSV_PATH = "resources/my_output.csv";
+	private static final String CSV_1_PATH = "../resources/1.csv";
+	private static final String CSV_2_PATH = "../resources/2.csv";
+	private static final String OUTPUT_CSV_PATH = "../resources/my_output.csv";
 
-	public void combineFiles( File csv1, File csv2, File outputFile ) throws Exception {
-		// System.out.println(csv1);		
-
+	public void combineFiles(File csv1, File csv2, File outputFile) throws Exception {
+       	System.out.println(csv1.);
 	}
 
 	public static void main( String[] args ) {
