@@ -1,5 +1,7 @@
 ### OCR Approach for the Given Task
 
+P.S. Please note the task I did is modified version of Pytorch Text Classification tutorial from the documentation
+
 Create a virtual environment, for isolating the project dependencies
 ```bash
 python -m venv task_venv

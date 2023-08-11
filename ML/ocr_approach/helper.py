@@ -1,7 +1,15 @@
 import os
 import csv
 
-def create_data_csv(path):
+def create_data_csv(path: str):
+    """Create the first CSV
+
+    Parameters
+    ----------
+    path : str
+        the path of where the root folder of dataset is present
+    """
+    # Creates a list of dictionary for the each row of the csv file
     file_label_pair= []
     for label in os.listdir(os.path.join(path,'ocr')):
         for file in os.listdir(os.path.join(path,'ocr',label)):
@@ -13,7 +21,19 @@ def create_data_csv(path):
         dict_writer.writeheader()
         dict_writer.writerows(file_label_pair)
 
-def map_values(value):
+def map_values(value:int):
+    """Map the value of labels from 0 to 4
+
+    Parameters
+    ----------
+    value : int
+        Unmapped value
+
+    Returns
+    -------
+    int
+        the mapped value
+    """
     if value == 0:
         return 0
     elif value == 2:
@@ -25,15 +45,5 @@ def map_values(value):
     elif value == 9:
         return 4
     
-def unmap_values(value):
-    if value == 0:
-        return 0
-    elif value == 1:
-        return 2
-    elif value == 2:
-        return 4
-    elif value == 3:
-        return 6
-    elif value == 4:
-        return 9
+
     
