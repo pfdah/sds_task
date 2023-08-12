@@ -4,6 +4,13 @@ from torchvision.datasets import ImageFolder
 from torch.utils.data import DataLoader
 
 def preprocess():
+    """Preprocess the data create custom dataset and return test, train and validation split
+
+    Returns
+    -------
+    DataLoader
+        three dataloaders for train, test and validations
+    """
     # Define data transformations
     transform = transforms.Compose([
         transforms.Resize((227, 227)),
@@ -24,4 +31,6 @@ def preprocess():
     train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True, num_workers=4)
     val_loader = DataLoader(val_dataset, batch_size=64, shuffle=False, num_workers=4)
     test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False, num_workers=4)
+    
+    # Return the dataloaders
     return train_loader, val_loader, test_loader
